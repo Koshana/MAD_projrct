@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">KoshanApp</string>
+    <string name="Ksend">Send</string>
+    <string name="Ktype_your_feedback">Type your Feedback</string>
+    <string name="Kfeedbacks">Feedbacks</string>
+    <string name="Ksubmit">Submit</string>
+    <string name="Rratings">Ratings</string>
+    <string name="Rabout_the_guider">About The Guider</string>
+    <string name="languages">Languages</string>
+    <string name="Kguiding_areas">Guiding Areas</string>
+    <string name="Kexperience">Experience</string>
+    <string name="Kguiders_name">Guiders Name</string>
+    <string name="Kview_more">View More</string>
+    <string name="Kdetails_of_the_guider">Details of the Guider</string>
+    <string name="Kguiders">Guiders</string>
+    <string name="Kadd_post">Add Post</string>
+    <string name="Knewsfeed">NewsFeed</string>
 </resources>

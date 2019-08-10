@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Start_homepage(){
 
-        Intent i =new Intent(this,Home_activity.class);
+        Intent i =new Intent(this,NewsFeed.class);
         startActivity(i);
 
     }

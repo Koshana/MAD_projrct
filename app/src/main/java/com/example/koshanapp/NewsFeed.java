@@ -7,26 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Guid_Registration extends AppCompatActivity {
+public class NewsFeed extends AppCompatActivity {
 
-    private Button regBtn;
+    private Button addPostBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guid__registration);
+        setContentView(R.layout.activity_news_feed);
 
-        regBtn=(Button) findViewById(R.id.button);
-        regBtn.setOnClickListener(new View.OnClickListener() {
+        addPostBtn=(Button) findViewById(R.id.addPostBtn1);
+        addPostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 open_guider_details();
             }
         });
-
     }
     public void open_guider_details(){
-        Intent intent =new Intent(this,OurGuiders.class);
+        Intent intent =new Intent(this,Post.class);
         startActivity(intent);
     }
 }

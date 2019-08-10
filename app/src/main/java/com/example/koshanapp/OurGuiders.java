@@ -2,31 +2,32 @@ package com.example.koshanapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-public class Guid_Registration extends AppCompatActivity {
+public class OurGuiders extends AppCompatActivity {
 
-    private Button regBtn;
+    private Button vBtn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guid__registration);
+        setContentView(R.layout.activity_our_guiders);
 
-        regBtn=(Button) findViewById(R.id.button);
-        regBtn.setOnClickListener(new View.OnClickListener() {
+        vBtn1=(Button) findViewById(R.id.viewBtn1);
+        vBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 open_guider_details();
             }
         });
-
     }
+
     public void open_guider_details(){
-        Intent intent =new Intent(this,OurGuiders.class);
+        Intent intent =new Intent(this,DetailsGuider.class);
         startActivity(intent);
     }
+
 }
