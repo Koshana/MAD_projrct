@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Post"></activity>
+        <activity android:name=".DefaultActivity"></activity>
+        <activity android:name=".InsertRowActivity" />
+        <activity android:name=".UpdateRowsActivity" />
+        <activity android:name=".DeleteRowsActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".Post" />
         <activity android:name=".NewsFeed" />
         <activity android:name=".OurGuiders" />
         <activity android:name=".DetailsGuider" />

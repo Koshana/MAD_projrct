@@ -7,12 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
+
+
 public class Home_activity extends AppCompatActivity {
+
+
 
     private Button button;
     private Button button1;
     private Button button2;
     private Button button4;
+    private Button button5;
 
 
     @Override
@@ -59,6 +65,13 @@ public class Home_activity extends AppCompatActivity {
             }
         });
 
+        button5=(Button) findViewById(R.id.admin);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                start_admin();
+            }
+        });
 
 
     }
@@ -66,7 +79,7 @@ public class Home_activity extends AppCompatActivity {
 
     public void Start_homepage(){
 
-        Intent i =new Intent(this,NewsFeed.class);
+        Intent i =new Intent(this,DefaultActivity.class);
         startActivity(i);
 
     }
@@ -91,6 +104,11 @@ public class Home_activity extends AppCompatActivity {
         Intent i =new Intent(this,Reset_Password.class);
         startActivity(i);
 
+    }
+
+    public void start_admin(){
+        Intent i = new Intent(this,AdminActivity.class);
+        startActivity(i);
     }
 
 

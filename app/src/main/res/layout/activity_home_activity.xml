@@ -20,8 +20,8 @@
         app:srcCompat="@drawable/kos" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="304dp"
-        android:layout_height="396dp"
+        android:layout_width="0dp"
+        android:layout_height="397dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -48,7 +48,6 @@
             android:hint="   user name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,14 +86,17 @@
             android:id="@+id/RegiUser"
             android:layout_width="115dp"
             android:layout_height="42dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="31dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="93dp"
             android:background="@android:color/holo_blue_bright"
             android:text="User Registration"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/RegiGuid"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login"
             app:layout_constraintVertical_bias="0.166" />
@@ -103,33 +105,42 @@
             android:id="@+id/RegiGuid"
             android:layout_width="121dp"
             android:layout_height="41dp"
-            android:layout_marginStart="47dp"
-            android:layout_marginLeft="47dp"
             android:layout_marginTop="31dp"
-            android:layout_marginEnd="44dp"
-            android:layout_marginRight="44dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
             android:layout_marginBottom="93dp"
             android:background="@android:color/holo_blue_light"
             android:text=" Guide Registration"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.641"
-            app:layout_constraintStart_toEndOf="@+id/RegiUser"
             app:layout_constraintTop_toBottomOf="@+id/login"
-            app:layout_constraintVertical_bias="0.285" />
+            app:layout_constraintVertical_bias="0.25" />
 
         <Button
             android:id="@+id/ResetPassword"
             android:layout_width="157dp"
             android:layout_height="40dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginTop="24dp"
             android:background="@android:color/holo_orange_light"
             android:text="Re set Password "
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegiGuid" />
+
+        <Button
+            android:id="@+id/admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="go to admin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ResetPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/RegiUser" />
     </androidx.constraintlayout.widget.ConstraintLayout>
