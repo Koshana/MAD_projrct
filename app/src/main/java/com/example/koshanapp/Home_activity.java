@@ -66,7 +66,7 @@ public class Home_activity extends AppCompatActivity {
 
     public void Start_homepage(){
 
-        Intent i =new Intent(this,NewsFeed.class);
+        Intent i =new Intent(this,ImageList.class);
         startActivity(i);
 
     }

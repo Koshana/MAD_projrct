@@ -12,11 +12,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
-    //Dulmini data inserion
+
     public void queryData(String sql){
         SQLiteDatabase database = getWritableDatabase();
         database.execSQL(sql);
     }
+
     public void insertData(String name, String price, byte[] image){
         SQLiteDatabase database = getWritableDatabase();
         String sql = "INSERT INTO IMG VALUES (NULL,?,?,?)";
@@ -56,14 +57,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         statement.execute();
         database.close();
     }
+
     public Cursor getData(String sql){
         SQLiteDatabase database = getWritableDatabase();
         return database.rawQuery(sql,null);
     }
-    //Dulmini data ending
-
-
-
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
