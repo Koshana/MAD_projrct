@@ -41,10 +41,12 @@
                 android:layout_width="328dp"
                 android:layout_height="67dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Name"
+                android:hint="Guider Name"
                 android:inputType="textPersonName"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D" />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -56,10 +58,12 @@
                 android:layout_width="289dp"
                 android:layout_height="61dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Phone"
+                android:hint="Guider Phone Number"
                 android:inputType="phone"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -71,10 +75,12 @@
                 android:layout_width="351dp"
                 android:layout_height="64dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Email"
+                android:hint="Guider Email"
                 android:inputType="textEmailAddress"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -86,10 +92,12 @@
                 android:layout_width="351dp"
                 android:layout_height="64dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Experience"
-                android:inputType="textPersonName"
+                android:hint="Guider Experience"
+                android:inputType="text"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -101,10 +109,12 @@
                 android:layout_width="351dp"
                 android:layout_height="64dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Language"
-                android:inputType="textPersonName"
+                android:hint="Guider Language"
+                android:inputType="text"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -116,10 +126,12 @@
                 android:layout_width="351dp"
                 android:layout_height="64dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  User Guiding Areas"
-                android:inputType="textPersonName"
+                android:hint="Guider Guiding Areas"
+                android:inputType="text"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
         <TableRow
@@ -131,10 +143,12 @@
                 android:layout_width="351dp"
                 android:layout_height="64dp"
                 android:layout_marginBottom="10dp"
-                android:hint="  Guider Details"
+                android:hint="Guider Details"
                 android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
                 android:textColor="#000000"
-                android:textColorHint="#68302D2D"  />
+                android:textColorHint="#68302D2D"
+                android:textColorLink="#FF6D00" />
         </TableRow>
 
 
@@ -145,13 +159,13 @@
 
             <Button
                 android:id="@+id/insertRowFrom"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="#7C94DE"
+                android:background="@drawable/bg_round_30dp_orange"
                 android:onClick="insertRow"
                 android:text="Add"
                 app:layout_constraintBottom_toBottomOf="parent"

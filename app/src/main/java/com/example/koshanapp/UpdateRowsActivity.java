@@ -1,13 +1,12 @@
 package com.example.koshanapp;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
 
@@ -37,11 +36,17 @@ public class UpdateRowsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("Update Row in SQLite");
+            actionBar.setTitle("Update the Row in SQLite");
 
 
         }
     }
+
+
+
+
+
+
     public boolean onOptionsItemSelected(MenuItem item){
 
 

@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONException;
 
@@ -57,7 +56,7 @@ public class UsersDatabaseAdapter {
 
 
             ContentValues newValues = new ContentValues();
-            // Assign values for each column.
+            // Enter data for each row.
             newValues.put("user_name", user_name);
             newValues.put("user_phone", user_phone);
             newValues.put("user_email", user_email);
@@ -67,11 +66,10 @@ public class UsersDatabaseAdapter {
             newValues.put("user_detail", user_detail);
 
 
-            // Insert the row into your table
+            // Insert One user detail into your table
             db = dbHelper.getWritableDatabase();
             long result = db.insert(TABLE_NAME, null, newValues);
             Log.i("Row Insert Result ", String.valueOf(result));
-            toast("User Info Saved! Total Row Count is " + getRowCount());
             db.close();
 
         } catch (Exception ex) {
@@ -107,7 +105,6 @@ public class UsersDatabaseAdapter {
     public static int deleteEntry(String ID) {
         String where = "ID=?";
         int numberOFEntriesDeleted = db.delete(TABLE_NAME, where, new String[]{ID});
-        toast("Number fo Entry Deleted Successfully : " + numberOFEntriesDeleted);
         return numberOFEntriesDeleted;
     }
 
@@ -115,7 +112,6 @@ public class UsersDatabaseAdapter {
     public static int getRowCount() {
         db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
-        toast("Row Count is " + cursor.getCount());
         db.close();
         return cursor.getCount();
     }
@@ -125,7 +121,6 @@ public class UsersDatabaseAdapter {
         db = dbHelper.getReadableDatabase();
         db.delete(TABLE_NAME, "1", null);
         db.close();
-        toast("Table Data Truncated!");
     }
 
     // method to Update an Existing Row in Table
@@ -142,7 +137,6 @@ public class UsersDatabaseAdapter {
         db = dbHelper.getReadableDatabase();
         db.update(TABLE_NAME, updatedValues, where, new String[]{ID});
         db.close();
-        toast("Row Updated!");
 
     }
 

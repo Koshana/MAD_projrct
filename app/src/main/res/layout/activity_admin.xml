@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.753">
 
-        <ImageButton
+       <!-- <ImageButton
             android:id="@+id/insertRow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,7 +73,18 @@
             app:layout_constraintTop_toBottomOf="@+id/insertRow"
             app:layout_constraintVertical_bias="1.0"
             android:backgroundTint="@android:color/transparent"
-            app:srcCompat="@drawable/deleteuser" />
+            app:srcCompat="@drawable/deleteuser" /> -->
+
+        <com.hitomi.cmlibrary.CircleMenu
+            android:id="@+id/circlemenu"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

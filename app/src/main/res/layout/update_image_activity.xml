@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/updateback">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/orange">
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update your post"
+        android:textStyle="italic"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <ImageView
+        android:id="@+id/imageViewImage"
+        android:layout_width="157dp"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:src="@drawable/upload"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/edtPrice"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/dlocation2"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:layout_below="@id/imageViewImage"
+        />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPrice"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ddescription"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName" />
+
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/dbtn_update"
+            android:layout_below="@id/edtName"
+            android:text="Update"
+            android:textColor="@color/orange" />
+
+
+</RelativeLayout>

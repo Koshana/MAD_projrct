@@ -1,8 +1,5 @@
 package com.example.koshanapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.ActionBar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class InsertRowActivity extends AppCompatActivity {
 
@@ -28,10 +28,6 @@ public class InsertRowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_row);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
-
         insertRowFrom = (Button) findViewById(R.id.insertRowFrom);
         mUserName = (TextView) findViewById(R.id.userNameTxt);
         mUserPhone = (TextView) findViewById(R.id.userPhoneTxt);
@@ -44,7 +40,7 @@ public class InsertRowActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("Inser New Row in SQLite");
+            actionBar.setTitle("Insert New info in SQLite");
         }
     }
     public void insertRow(View view) {
