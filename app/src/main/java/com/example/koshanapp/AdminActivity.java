@@ -48,7 +48,6 @@ public class AdminActivity extends AppCompatActivity {
                             DeleteGuiders();
                         }
 
-
                     }
                 });
     }
