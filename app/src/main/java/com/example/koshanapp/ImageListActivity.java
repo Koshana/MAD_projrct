@@ -33,15 +33,16 @@ public class ImageListActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.action_addimage:
-                    Intent a = new Intent(ImageListActivity.this, MainActivity.class);
+                    System.out.println(getTitle());
+                    Intent a = new Intent(ImageListActivity.this, Home_activity.class);
                     startActivity(a);
                     break;
                 case R.id.action_profile:
-                    Intent c = new Intent(ImageListActivity.this, MainActivity.class);
+                    Intent c = new Intent(ImageListActivity.this, Home_activity.class);
                     startActivity(c);
                     break;
                 case R.id.action_guider:
-                    Intent d = new Intent(ImageListActivity.this, MainActivity.class);
+                    Intent d = new Intent(ImageListActivity.this, Home_activity.class);
                     startActivity(d);
                     break;
             }
