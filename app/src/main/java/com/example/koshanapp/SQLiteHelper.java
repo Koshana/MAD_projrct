@@ -81,13 +81,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
         //sqLiteDatabase.execSQL("create table user(name text,DOB text,email text primary key,country text,password text)");
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
         sqLiteDatabase.execSQL("drop table if exists user");
     }
-
     public boolean insert(String name, String DOB,String email, String country,String password){
 
         SQLiteDatabase db= this.getWritableDatabase();
@@ -108,7 +106,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             return true;
 
     }
-
     public boolean checkMail(String email){
 
         SQLiteDatabase db= this.getReadableDatabase();
@@ -119,7 +116,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-
     public boolean emailPassword(String email,String password){
 
         SQLiteDatabase db= this.getReadableDatabase();
@@ -132,7 +128,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-
     public boolean resetPassword(String email,String password){
 
         SQLiteDatabase db=this.getWritableDatabase();
@@ -152,10 +147,55 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     //Koshana End
 
 
+    // udara atart
+    public Cursor getAllData(){
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor res= db.rawQuery("select * from user",null);
+        return res;
+    }//end
+    //select
+    public Cursor selectData(String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from user where email = ?", new String[]{id});
+        return res;
+    }
+    public boolean insertdescription(String email, String des){
+
+        SQLiteDatabase db= this.getWritableDatabase();
+        ContentValues contentValues= new ContentValues();
+
+        contentValues.put("email",email);
+        contentValues.put("description",des);
 
 
+        long ins=db.insert("feedback",null,contentValues);
 
+        if (ins == -1){
 
+            return false;
+        }
+        else
+            return true;
 
+    }
+    //end
+    //    public boolean updateData(String uname,String date,String email,String co,String pass,String dob,String p_name,String p_nic){
+//        SQLiteDatabase db=this.getWritableDatabase();
+//        ContentValues contentValues=new ContentValues();
+//
+//        contentValues.put(name,uname);
+//        contentValues.put(DOB,date);
+//        contentValues.put(email,email);
+//        contentValues.put(country,co);
+//        contentValues.put(password,pass);
+////        contentValues.put(COL_6,dob);
+////        contentValues.put(COL_7,p_name);
+////        contentValues.put(COL_8,p_nic);
+//
+//        db.update("user",contentValues,"ID = ?", new String[]{email});
+//
+//        return true;
+//
+//    }//end
 
 }

@@ -293,7 +293,7 @@ public class ImageList extends AppCompatActivity {
                     startActivity(a);
                     break;
                 case R.id.action_profile:
-                    Intent c = new Intent(ImageList.this, Post.class);
+                    Intent c = new Intent(ImageList.this, userprofile.class);
                     startActivity(c);
                     break;
                 case R.id.action_guider:

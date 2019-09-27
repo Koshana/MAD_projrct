@@ -19,6 +19,8 @@
         <activity android:name=".Guid_Registration" />
         <activity android:name=".User_registration" />
         <activity android:name=".Home_activity" />
+        <activity android:name=".userprofile"/>
+        <activity android:name=".usermessage"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
