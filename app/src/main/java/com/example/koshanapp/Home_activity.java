@@ -1,7 +1,5 @@
 package com.example.koshanapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Home_activity extends AppCompatActivity {
 
     private Button button;
     private Button button1;
     private Button button2;
     private Button button4;
+    Button adminPageBtn;
     EditText logEmail;
     EditText logPass;
     SQLiteHelper DB;
@@ -82,6 +83,13 @@ public class Home_activity extends AppCompatActivity {
             }
         });
 
+        adminPageBtn = (Button) findViewById(R.id.adminPageBtn);
+        adminPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startAdminLoginPage();
+            }
+        });
 
 
     }
@@ -102,12 +110,12 @@ public class Home_activity extends AppCompatActivity {
 
     }
 
-    /*public void Start_Guid_page(){
+    public void startAdminLoginPage(){
 
-        Intent i =new Intent(this,Guid_Registration.class);
+        Intent i =new Intent(this,AdminLogin.class);
         startActivity(i);
 
-    }*/
+    }
 
     public void Start_resetPassword_page(){
 

@@ -1,11 +1,14 @@
 package com.example.koshanapp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.net.Uri;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.hitomi.cmlibrary.CircleMenu;
+import com.hitomi.cmlibrary.OnMenuSelectedListener;
 
 
 public class AdminActivity extends AppCompatActivity {
@@ -17,51 +20,55 @@ public class AdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
-        // create the instance of Databse
-
+        // create the Database
         usersDatabaseAdapter=new UsersDatabaseAdapter(getApplicationContext());
+
+        CircleMenu circleMenu = findViewById(R.id.circlemenu);
+
+        final String[] menus = {
+                "Add Guider",
+                "Update Guider",
+                "Delete Guider"
+        };
+
+        circleMenu.setMainMenu(Color.parseColor("#ff5721"),R.drawable.power,R.drawable.cancelicon)
+                .addSubMenu( Color.parseColor("#ff7034"),R.drawable.addusericon)
+                .addSubMenu( Color.parseColor("#fe6700"),R.drawable.upateusericon)
+                .addSubMenu( Color.parseColor("#ee4328"),R.drawable.deleteusericon)
+                .setOnMenuSelectedListener(new OnMenuSelectedListener() {
+                    @Override
+                    public void onMenuSelected(int index) {
+                        Toast.makeText(AdminActivity.this, "Welcome to " + menus[index] + " Page", Toast.LENGTH_SHORT).show();
+
+                        if (menus[index]=="Add Guider"){
+                            AddGuiders();
+                        } else if (menus[index]=="Update Guider"){
+                            UpdateGuiders();
+                        } else if (menus[index]=="Delete Guider"){
+                            DeleteGuiders();
+                        }
+
+
+                    }
+                });
+    }
+    // Start the Activities
+    private void AddGuiders() {
+        Intent i =new Intent(this,InsertRowActivity.class);
+        startActivity(i);
     }
 
-    //open activity to Insert new rows in table
-    public void insertRowActivity(View view) {
-        Intent myIntent = new Intent(AdminActivity.this, InsertRowActivity.class);
-        AdminActivity.this.startActivity(myIntent);
+    private void UpdateGuiders() {
+        Intent i =new Intent(this,UpdateRowsActivity.class);
+        startActivity(i);
     }
 
-    //Open activity to update rows
-    public void updateRowView(View view) {
-        Intent myIntent = new Intent(AdminActivity.this, UpdateRowsActivity.class);
-        AdminActivity.this.startActivity(myIntent);
+    private void DeleteGuiders() {
+        Intent i =new Intent(this,DeleteRowsActivity.class);
+        startActivity(i);
     }
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-    //call method to show rows count in Toast
-    public void rowCount(View view) {
-        UsersDatabaseAdapter.getRowCount();
-    }
-
-    //Open activity to delete rows
-    public void deleteRowActivity(View view) {
-        Intent myIntent = new Intent(AdminActivity.this, DeleteRowsActivity.class);
-        AdminActivity.this.startActivity(myIntent);
-    }
-
-    //Button method to truncate table rows
-    public void truncateTable(View view) {
-        UsersDatabaseAdapter.truncateTable();
-    }
-
-    //public void DisplayRow(View view) {
-      //  Intent myIntent = new Intent(AdminActivity.this,DisplayActivity.class);
-        //AdminActivity.this.startActivity(myIntent);
-    //}
-
-    //Open URL in browser
-    public void goToUrl (View view) {
-        String url = "http://www.google.com";
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
 
 
 }

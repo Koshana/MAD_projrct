@@ -1,6 +1,5 @@
 package com.example.koshanapp;
 
-import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -20,7 +19,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         try {
             db.execSQL(UsersDatabaseAdapter.DATABASE_CREATE);
         }catch(Exception er){
-            Log.e("Error","exceptioin");
+            Log.e("Error","exception");
         }
 
     }

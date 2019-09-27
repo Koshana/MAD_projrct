@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.koshanapp">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AdminLogin"></activity>
+        <activity android:name=".AdminActivity"/>
+        <activity android:name=".InsertRowActivity"/>
+        <activity android:name=".UpdateRowsActivity"/>
+        <activity android:name=".DeleteRowsActivity"/>
+        <activity android:name=".NewsFeed" />
         <activity android:name=".Post" />
         <activity android:name=".OurGuiders" />
         <activity android:name=".DetailsGuider" />
@@ -28,10 +31,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ImageList"
-            android:label="Image List"
-            android:parentActivityName=".Home_activity" />
     </application>
 
 </manifest>

@@ -7,10 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 
-import androidx.annotation.Nullable;
-
-import java.sql.Date;
-
 public class SQLiteHelper extends SQLiteOpenHelper {
 
 
